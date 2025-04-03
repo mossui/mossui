@@ -2,6 +2,8 @@
 
 ## Colors
 
+[![](https://data.jsdelivr.com/v1/package/npm/@mossui/colors/badge)](https://www.jsdelivr.com/package/npm/@mossui/colors)
+
 ### NPM
 
 ```bash

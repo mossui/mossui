@@ -1,6 +1,6 @@
 {
   "name": "@mossui/colors",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Colors",
   "main": "dist/colors.min.css",
   "files": [

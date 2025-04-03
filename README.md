@@ -4,7 +4,7 @@
 
 ```bash
 # npm
-npm i @mossui/color
+npm i @mossui/colors
 ```
 
 ```css

@@ -2,6 +2,7 @@
 
 ## Colors
 
+[![NPM](https://img.shields.io/npm/v/@mossui/colors?color=blue)](https://www.npmjs.com/package/@mossui/colors)
 [![](https://data.jsdelivr.com/v1/package/npm/@mossui/colors/badge)](https://www.jsdelivr.com/package/npm/@mossui/colors)
 
 ### NPM

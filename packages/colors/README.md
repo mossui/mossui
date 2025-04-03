@@ -7,9 +7,9 @@ A comprehensive CSS color palette library with semantic naming and easy-to-use C
 
 ## Features
 
-- 🎨 18 color families with 10 shades each
+- 🎨 18 color families
 - 🖌️ CSS variables for easy theming
-- 📦 Lightweight (~5KB minified)
+- 📦 Lightweight (~6KB minified)
 - 🌍 Available via NPM and CDN
 - 🏗️ Framework agnostic
 

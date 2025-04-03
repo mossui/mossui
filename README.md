@@ -1,9 +1,19 @@
-# Moss UI
+# Moss UI - Colors
 
-## Colors
+A comprehensive CSS color palette library with semantic naming and easy-to-use CSS variables.
 
-[![NPM](https://img.shields.io/npm/v/@mossui/colors?color=blue)](https://www.npmjs.com/package/@mossui/colors)
-[![](https://data.jsdelivr.com/v1/package/npm/@mossui/colors/badge)](https://www.jsdelivr.com/package/npm/@mossui/colors)
+[![NPM Version](https://img.shields.io/npm/v/@mossui/colors?color=blue)](https://www.npmjs.com/package/@mossui/colors)
+[![jsDelivr CDN](https://data.jsdelivr.com/v1/package/npm/@mossui/colors/badge)](https://www.jsdelivr.com/package/npm/@mossui/colors)
+
+## Features
+
+- 🎨 18 color families with 10 shades each
+- 🖌️ CSS variables for easy theming
+- 📦 Lightweight (~5KB minified)
+- 🌍 Available via NPM and CDN
+- 🏗️ Framework agnostic
+
+## Installation
 
 ### NPM
 
@@ -12,8 +22,9 @@
 npm i @mossui/colors
 ```
 
+Then import in your CSS:
+
 ```css
-/* main.css */
 @import '@mossui/colors';
 ```
 
@@ -39,6 +50,8 @@ h1 {
 ```
 
 ### Color pallete
+
+Moss UI provides a complete color system with 18 color families:
 
 | Variable | Value | Color Preview |
 |----------|-------|---------------|

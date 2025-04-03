@@ -1,0 +1,24 @@
+{
+  "name": "@mossui/colors",
+  "version": "0.0.1",
+  "description": "Colors",
+  "main": "dist/colors.min.css",
+  "files": [
+    "dist"
+  ],
+  "private": false,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "watch": "npm run build -- --watch",
+    "build": "sass src/colors.scss dist/colors.css --no-source-map && postcss dist/colors.css --base dist --dir dist --ext .min.css"
+  },
+  "devDependencies": {
+    "cssnano": "^7.0.6",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.86.1"
+  }
+}

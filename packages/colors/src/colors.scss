@@ -1,0 +1,77 @@
+@use "sass:color";
+@use "sass:math";
+@use "sass:map";
+
+@function adjust-lightness($color, $amount) {
+  @return color.adjust($color, $lightness: $amount);
+}
+
+@function ensure-hex($color) {
+  // Convert to RGB and back to force hex output using modern syntax
+  $red: color.channel($color, "red", $space: rgb);
+  $green: color.channel($color, "green", $space: rgb);
+  $blue: color.channel($color, "blue", $space: rgb);
+  @return rgb($red, $green, $blue);
+}
+
+@mixin generate-shades($name, $color) {
+  // Define the specific levels we want
+  $levels: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950;
+  
+  // Base lightness adjustment for each level
+  $adjustments: (
+    50: 45%,
+    100: 35%,
+    200: 25%,
+    300: 15%,
+    400: 5%,
+    500: 0%,
+    600: -10%,
+    700: -20%,
+    800: -30%,
+    900: -40%,
+    950: -45%
+  );
+  
+  // Generate each specific level
+  @each $level in $levels {
+    $adjusted-color: adjust-lightness($color, map.get($adjustments, $level));
+    --color-#{$name}-#{$level}: #{ensure-hex($adjusted-color)};
+  }
+  
+  // Set the base color (without -500 suffix)
+  --color-#{$name}: #{ensure-hex($color)};
+}
+
+$colors: (
+  "red": hsl(356.95 96% 57.99999999999999%),
+  "orange": hsl(24.65 100% 50%),
+  "amber": hsl(36.49 100% 50%),
+  "yellow": hsl(44.37 100% 47%),
+  "lime": hsl(83.9 100% 40%),
+  "green": hsl(144.07 100% 39%),
+  "emerald": hsl(159.74 100% 37%),
+  "teal": hsl(173.58 100% 37%),
+  "cyan": hsl(189.48 100% 43%),
+  "sky": hsl(199.26 100% 48%),
+  "blue": hsl(216.26 100% 57.99999999999999%),
+  "indigo": hsl(240.98 100% 69%),
+  "violet": hsl(260.92 100% 66%),
+  "purple": hsl(273.3 100% 64%),
+  "fuchsia": hsl(292.61 96% 57.99999999999999%),
+  "pink": hsl(328.25 92% 57.99999999999999%),
+  "rose": hsl(345.32 100% 56.00000000000001%),
+  "slate": hsl(215.38 18% 47%),
+  "gray": hsl(220.03 10% 46%),
+  "zinc": hsl(240.1 4% 46%),
+  "neutral": hsl(223.81 0% 45%),
+  "stone": hsl(25.02 6% 45%),
+);
+
+:root {
+  --color-white: white;
+  --color-black: black;
+  @each $name, $color in $colors {
+    @include generate-shades($name, $color);
+  }
+}
